@@ -1,0 +1,257 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+:root {
+  color: rgba(255, 255, 255, 0.8);
+  background-color: black;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  margin: 0 auto;
+}
+
+.background-aura {
+  height: 100%;
+  width: 100%;
+  background-color: #000000e3;
+}
+
+/* header */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1em;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1.2rem;
+}
+
+#about-me p {
+  font-size: 1rem;
+}
+
+.socials {
+  padding: 1.5em 0;
+}
+
+.icon {
+  display: inline-block;
+  fill: #ffffff60;
+}
+
+.icon:hover {
+  transition: all 0.3s ease;
+  filter: drop-shadow(0px 2px 10px rgba(255, 255, 255, 0.9));
+  fill: #ffffff;
+  color: #ffffff;
+}
+
+#header-txt {
+  margin: 1em 0 0;
+  width: 290px;
+}
+
+#skills,
+#stack {
+  margin: 1em 0;
+}
+
+#stack button {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 5px;
+  width: 80px;
+  padding: 0.2em 0.2em;
+  color: rgb(0, 0, 0);
+}
+
+#about-me {
+  margin: 1.5em 0;
+}
+ul {
+  list-style-type: none;
+}
+
+/* projects */
+
+.project-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1em;
+  margin-top: 2em;
+}
+
+.project {
+  display: flex;
+  flex-direction: column;
+}
+
+.project img {
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.project h3 {
+  font-size: 1.5rem;
+  margin: 0.5em 0;
+}
+
+.project p {
+  font-size: 1rem;
+}
+
+footer p {
+  margin-top: 50px;
+  text-align: right;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.8em;
+}
+
+/* animations */
+
+.cursor {
+  animation: blink-animation 1s steps(5, start) infinite;
+}
+
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+
+/* media queries */
+
+@media (min-width: 768px) {
+  .container {
+    display: flex;
+  }
+
+  .left-container {
+    display: flex;
+    top: 0;
+    left: 0;
+    flex-direction: column;
+    position: fixed;
+    width: 40%;
+    min-width: 280px;
+    height: 100vh;
+    overflow-y: auto; /* Optional: if you want the left container to be scrollable */
+  }
+
+  #about-me {
+    margin: 1.6em 0;
+  }
+
+  #header-txt {
+    min-width: 280px;
+  }
+
+  .right-container {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-left: 40%; /* Adjust this value to match the width of the left container */
+    width: 60%;
+  }
+
+  .right-container section {
+    margin: 0 1em;
+  }
+
+  .project-container {
+    margin: 1em 1em;
+  }
+
+  /* new pop up */
+
+  .project {
+    position: relative;
+    width: 100%;
+  }
+
+  #project-img-1,
+  #project-img-2,
+  #project-img-3 {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(
+      360deg,
+      rgba(0, 0, 0, 1) 0%,
+      hsla(0, 0%, 0%, 0.7) 80%,
+      rgba(0, 0, 0, 0.5) 100%
+    );
+    border: none;
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    transition: 0.5s ease;
+  }
+
+  .project:hover .overlay {
+    height: 100%;
+  }
+
+  .overlay:hover,
+  .project:hover {
+    transition: all 0.5s ease;
+    box-shadow: 0 0 50px 1px rgba(255, 255, 255, 0.1);
+  }
+
+  .text {
+    color: rgba(255, 255, 255, 0.7);
+    border: 1px solid rgb(25, 0, 255);
+    font-size: 20px;
+    position: absolute;
+    width: 95%;
+    top: 78%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: left;
+  }
+
+  .text h4,
+  .text p {
+    font-size: 1em;
+    margin: 0.1em;
+  }
+
+  .text p {
+    font-size: 0.8em;
+  }
+
+  footer p {
+    margin-top: 50px;
+    margin-right: 3%;
+    text-align: right;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.8em;
+  }
+}
