@@ -124,8 +124,8 @@ ul {
   font-size: 1em;
   font-weight: 600;
   border: 1px solid rgba(80, 80, 80, 0.342);
-  padding: 7px;
-  width: 100px;
+  padding: 10px;
+  width: 75px;
   margin: 0.5rem 0.5rem 0.5rem 0;
   transition: all 0.5s ease;
   background-color: rgb(255, 255, 255);
@@ -165,7 +165,7 @@ footer p {
 
 /* media queries */
 
-@media (min-width: 1024px) {
+@media (min-width: 1000px) {
   .left-container {
     position: fixed;
     width: 40%;
@@ -225,14 +225,15 @@ footer p {
   .project:hover {
     transition: all 0.5s ease;
     box-shadow: 0 0 50px 1px rgba(255, 255, 255, 0.1);
+    overflow: visible;
   }
 
   .space-btn {
     font-size: 0.7em;
     font-weight: bold;
-    padding: 6px;
+    padding: 5px;
     width: 90px;
-    margin-right: 0.2rem;
+    margin-right: 0.5rem;
   }
 
   .space-btn:hover {
@@ -241,10 +242,10 @@ footer p {
 
   .text {
     color: rgba(255, 255, 255, 0.7);
-    font-size: 20px;
+    font-size: 1.2em;
     position: absolute;
-    width: 95%;
-    top: 78%;
+    width: 90%;
+    top: 75%;
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
@@ -261,4 +262,32 @@ footer p {
     font-size: 0.8em;
     margin: 0.5rem 0;
   }
+}
+
+.test {
+  display: flex;
+  flex-direction: column;
+}
+
+.stack {
+  display: flex;
+  flex-direction: row;
+}
+
+.stack p {
+  width: 75px;
+  background-color: rgb(28, 104, 117);
+  color: rgb(0, 0, 0);
+  border-radius: 10px;
+  text-align: center;
+  margin-right: 0.5rem;
+  padding: 5px;
+  font-size: 0.6em;
+  font-weight: 600;
+  border: 2px solid rgb(2, 42, 49);
+}
+
+.button-pos {
+  display: flex;
+  flex-direction: row;
 }
