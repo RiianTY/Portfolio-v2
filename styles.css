@@ -237,7 +237,7 @@ footer p {
     color: rgba(255, 255, 255, 0.7);
     position: absolute;
     width: 90%;
-    top: 75%;
+    top: 80%;
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
