@@ -171,6 +171,10 @@ footer p {
 /* media queries */
 
 @media (min-width: 1000px) {
+  .left-container section {
+    margin: 1rem;
+  }
+
   .left-container {
     position: fixed;
     width: 40%;
